@@ -1,0 +1,31 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alt-header_tittle {
+  font-size: 28px;
+  font-weight: 600;
+}
+.alt-header_coulmn {
+  width: 33%;
+}
+/*.alt-header_coulmn:first-child {
+  margin-left: auto;
+}
+.alt-header_coulmn:last-child {
+  margin-right: auto;
+}*/
+.alt-header_coulmn span:last-child {
+  margin-left: 20px;
+}
+.alt-header_coulmn:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.alt-header_coulmn:nth-child(2) {
+  text-align: center;
+}

@@ -1,0 +1,194 @@
+#chat-screen {
+  background-color: #abc0d1;
+  height: 500vh;
+}
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  background-color: #abc0d1;
+  z-index: 1;
+}
+#chat-screen .status-bar {
+  position: fixed;
+  background-color: #abc0d1;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.main-chat {
+  animation: fadeIn 0.8s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+}
+/*.chat__timestamp {
+  background-color: #91a3b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 25px;
+  border-radius: 75px;
+  font-size: 5px;
+} 일단 flex를 여기에 했으면 안되고 flex는 main-chat에 넣었어야함
+width나 height도 필요없었고 color 흰색은 했으면 되는거고 */
+.chat__timestamp {
+  color: white;
+  background-color: #91a3b2;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.message_author {
+  margin-bottom: 5px;
+  display: block;
+}
+.message_bubble {
+  background-color: white;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-right: 5px;
+  border-top-left-radius: 0px;
+}
+.message_info {
+  display: flex;
+  align-items: flex-end;
+}
+.message_time,
+.message_author {
+  opacity: 0.8;
+  font-size: 13px;
+}
+/*.message-row:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.message_bubble:last-child {
+  background-color: #fee501;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-right: 5px;
+  border-top-right-radius: 0px;
+  margin-left: 5px;
+}*/
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message_bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+/*.message-row--own .message_bubble {
+  order: 1;
+}
+..message-row--own .message_time {
+  order: 0;
+} 이 방식보다 아래 방식이 코드가 더 적어서 유용함 이 방식은 코드가 투머치임*/
+.message-row--own .message_info {
+  flex-direction: row-reverse;
+}
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 5px 25px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply i {
+  opacity: 0.5;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.reply__column {
+  position: relative;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -18px;
+  top: 5px;
+}
+.reply__column:last-child > i {
+  right: 30px;
+  top: 12px;
+}
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.reply__column button i {
+  opacity: 1;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-11%) translateY(-80px);
+}
+.reply:focus-within {
+  transform: translateY(80px);
+}

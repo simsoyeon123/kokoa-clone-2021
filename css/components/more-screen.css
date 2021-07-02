@@ -1,0 +1,74 @@
+/*.user-component {
+  margin: 0px var(--horizontal-space);
+}
+
+.user-component_subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+.user-component_column:last-child i {
+  font-size: 40px;
+  color: #030303;
+}
+*/
+.more-main {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.more-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+}
+.more-main-screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /*이게 먼데! 바로 정리되네*/
+}
+.more-main-screen i {
+  font-size: 40px;
+}
+.more-main-screen span {
+  margin-top: 15px;
+  color: #5d5d5d;
+}
+/*.more-suggestions_suggestion {
+  padding: 20px;
+}
+.more-suggestions_photo {
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+}
+.more-suggestions_photo_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.more-suggestions_photo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.more-suggestions_photo span {
+  opacity: 0.5;
+}
+*/
+.user-component_subtitle div {
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid tomato;
+  border-radius: 50%;
+  color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-component_subtitle {
+  display: flex;
+  justify-content: center;
+}
+.user-component_subtitle div {
+  margin-left: 5px;
+}
